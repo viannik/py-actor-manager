@@ -33,7 +33,7 @@ def test_db(tmp_path):
 
 @pytest.fixture()
 def manager(test_db):
-    return ActorManager(test_db, TABLE_NAME)
+    return ActorManager(db_name=test_db, table_name=TABLE_NAME)
 
 
 def test_create(manager):
