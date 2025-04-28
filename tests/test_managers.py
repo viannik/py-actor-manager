@@ -85,8 +85,8 @@ def test_update(manager):
 
 
 def test_delete(manager):
-    manager.create("Brad", "Pitt")
-    manager.create("Leonardo", "DiCaprio")
+    manager.create(first_name="Brad", last_name="Pitt")
+    manager.create(first_name="Leonardo", last_name="DiCaprio")
 
     manager.delete(pk=1)
     actors = manager.all()
